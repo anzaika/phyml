@@ -101,7 +101,7 @@ AM_CONDITIONAL([WANT_WIN], [test "$enable_win" = yes])
 
 
 AC_ARG_ENABLE([beagle], [AS_HELP_STRING([--enable-beagle], [Compute likelihoods using BEAGLE library.])], [beagle=yes],[beagle=no])
-AS_IF([test "x$enable_beagle" = "xyes"],[PKG_CHECK_MODULES(BEAGLE, hmsbeagle-1)])
+#AS_IF([test "x$enable_beagle" = "xyes"],[PKG_CHECK_MODULES(BEAGLE, hmsbeagle-1)])
 AS_IF([test "x$enable_beagle" = "xyes"],
       [CFLAGS="${CFLAGS} ${BEAGLE_CFLAGS} ${BEAGLE_LIBS} -lstdc++ ${ARCH_flag}"],
       [CFLAGS=${CFLAGS}])
